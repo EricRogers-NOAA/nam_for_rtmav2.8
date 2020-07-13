@@ -97,6 +97,9 @@ do
   cp ${ST2file[$ihr]}.gz $COMOUT/${RUN}.t${cyc}z.${ST2file[$ihr]}.${tmmark}.gz
   cp ${ST4file[$ihr]}.gz $COMOUT/${RUN}.t${cyc}z.${ST4file[$ihr]}.${tmmark}.gz
   cp ${nampcpfile[$ihr]} $COMOUT/${RUN}.t${cyc}z.${nampcpfile[$ihr]}.${tmmark}
+  # unzip files so merge2n4 will work!
+  gunzip ST2ml${time}.Grb.gz
+  gunzip ST4.${time}.01h.gz
 done
 
 # Interpolate 4 km precipitation analyses to nam grid
